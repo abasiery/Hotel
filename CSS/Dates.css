@@ -1,0 +1,313 @@
+/* Global Edits */
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../imgs/view2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --main-color:#8c8279;
+    --Dark:#292b2c;
+    --backgroundColor: rgba(255, 255, 255, 0.7);
+    --darkerBackgroundColor: rgba(105, 105, 105, 0.2); 
+}
+
+/*Nav bar*/
+nav{
+    background: var(--backgroundColor);
+    
+}
+.navbar{
+    padding:18px;
+    
+}
+/* .navbar-brand{
+    font-family: "Italiana";
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+} */
+.nav-item{
+    padding:0px 18px ;
+}
+.nav-link{
+    font-size: 1.2rem;
+    /* font-family: 'Montserrat-light'; */
+    color: var(--Dark) ;
+}
+.nav-link:hover{
+    color: var(--main-color);
+}
+.bg-dark{
+    background-color: var(--Dark);
+}
+
+/*Step bar progress*/
+.step {
+width: 100%;
+height: 150px;
+border-top: .5px solid white ;
+padding-top:2rem;
+padding-bottom: 2rem;
+background: var(--backgroundColor);
+box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.progressbar {
+counter-reset: step;
+}
+.step li {
+list-style: none;
+float:left;
+width:33.33%;
+position: relative;
+text-align: center;
+cursor: pointer;
+color: var(--Dark);
+}
+.step i{
+margin-top: 15px;
+font-size: 25px;
+color: var(--main-color);
+}
+.progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 30px;
+height: 30px;
+border: 1px solid white;
+display: block;
+line-height: 30px;
+text-align: center;
+margin: 0 auto 10px;
+border-radius: 50%;
+background-color: #ddd;
+}
+.progressbar li:after {
+content: '';
+position: absolute;
+width: 100%;
+height: 4px;
+background: #ddd;
+top: 15px;
+left: -50%;
+z-index: -1;
+}
+.progressbar li:first-child:after {
+content: none;
+}
+
+.progressbar li.active {
+color: var(--main-color);
+}
+.progressbar li.active:before {
+border-color: var(--main-color);
+}
+/* .progressbar li.active + li:after {
+background-color: green;
+-webkit-animation-name: slide;
+    -webkit-animation-duration: 3s;
+}
+@-webkit-keyframes slide {
+    0%   { width:    0%;}
+    30%, 
+    60%  { width:   50%;}
+    70%  { width:   80%;}
+    100% { width:  100%;}
+} */
+
+
+/* dates section */
+.section {
+    position: relative;
+    height: 20vh;
+}
+.section .section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+#booking {
+    font-family: 'Roberto', sans-serif;
+}
+.booking-form {
+    position: relative;
+    max-width: 642px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: 5px;
+    z-index: 2;
+}
+.booking-form::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: var(--backgroundColor);
+    z-index: -1;
+}
+.booking-form .form-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.booking-form .form-header h1 {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 42px;
+    margin: 0px;
+    color: #515354;
+}
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+.booking-form .form-control {
+    background-color: rgba(105, 105, 105, 0.2); 
+    height: 60px;
+    padding: 0px 25px;
+    border: none;
+    border-radius: 40px;
+    color: var(--Dark);
+    -webkit-box-shadow: 0px 0px 0px 2px transparent;
+    box-shadow: 0px 0px 0px 2px transparent;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.booking-form .form-control:focus {
+    -webkit-box-shadow: 0px 0px 0px 2px var(--main-color);
+    box-shadow: 0px 0px 0px 2px var(--main-color);
+}
+.booking-form input[type="date"].form-control {
+    padding-top: 16px;
+}
+.booking-form input[type="date"].form-control+.form-label {
+    opacity: 1;
+    top: 10px;
+}
+.booking-form .form-label {
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    opacity: 0;
+    color: var(--main-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 15px;
+    line-height: 15px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.booking-form .submit-btn {
+    color: #fff;
+    background-color: var(--main-color);
+    font-weight: 700;
+    height: 60px;
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+    opacity: 0.9;
+}
+
+/* modal */
+/* Set a style for all buttons */
+button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+    position: absolute;
+    right: 40%;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.contain {
+    padding: 16px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 35%;
+    z-index: 20 ;
+}
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+#message{
+    text-align: center;
+    margin-top: 6% ;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn {
+        width: 100%;
+    }
+}

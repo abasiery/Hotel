@@ -1,0 +1,360 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.buttons{
+  background-color: transparent;
+  border: transparent;
+  padding-right: 50%;
+}
+
+.buttons2{
+  background-color: transparent;
+  border: transparent;
+  padding-right: 50%;
+  padding-left: 50%;
+}
+.buttons3{
+  background-color: transparent;
+  border: transparent;
+  padding-left: 50%;
+}
+
+.child {
+  width: 200px; height: 100%;
+  
+  display: inline-block;
+  
+}
+.fishes
+{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.fish
+{
+  position: absolute;
+  top: 60px;
+  left: 80px;
+}
+
+.top2
+{
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+
+.top1
+{
+  position: absolute;
+  top: 48%;
+  left: 45%;
+}
+
+.top3
+{
+  position: absolute;
+  top: 58%;
+  left: 43%;
+  
+}
+:root {
+  --main-color:#8c8279;
+  --Dark:#292b2c;
+  --backgroundColor: rgba(255, 255, 255, 0.7);
+  --darkerBackgroundColor: rgba(105, 105, 105, 0.2); 
+}
+
+/*Nav bar*/
+nav{
+background-color: rgb(140, 130, 121 , 6%) ;
+font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+padding:18px;
+}
+
+.nav-item{
+padding:0px 18px ;
+}
+.nav-link{
+font-size: 1.2rem;
+color: var(--Dark) ;
+}
+.nav-link:hover{
+color: var(--main-color);
+}
+.bg-dark{
+background-color: var(--Dark);
+}
+.long
+{
+  position:absolute;
+  right: 0%;
+}
+.contact{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contact .info{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.contact .info .label{
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-top: 25px;
+  margin-bottom: 15px ;
+  color: var(--Dark);
+}
+
+.contact .info .link{
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.contact .info .social{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact .info .social i{
+  margin-left: 10px;
+  color: var(--secColor);
+}
+.special-heading{
+  margin: 0;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(140, 130, 121 , 30%) ;
+  letter-spacing: -3px;
+}
+.special-heading + p{
+margin: -80px 0px ;
+font-size: 40px;
+text-align: center;
+color: var(--main-color);
+font-family: "Monsieur La Doulaise";
+}
+.contact .info .social{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+font-size: 16px;
+}
+
+.contact .info .social i{
+margin-left: 10px;
+color: var(--secColor);
+}
+@media (max-width: 768px){
+.special-heading{
+  font-size: 60px;
+}
+
+.special-heading + p{
+  margin: -20px 0;
+}
+}
+@media (max-width: 767px){
+.contact .info .label,
+.contact .info .link {
+  font-size: 25px;
+}
+}
+.contact .youtube{
+color: red;
+}
+.contact .twitter{
+color: #00acee;
+}
+
+
+.container_row{
+  display: grid;
+  padding: 20px 20px 20px 170px ;
+
+}
+
+
+
+/* -------- */
+
+.layer1{
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 900px;
+  padding: 20px 20px 20px 20px ;
+}
+  .layer2{
+  grid-column: 2;
+  grid-row: 1;
+  position: absolute;
+  right: 10px;
+  padding-right: 50px;
+}
+
+#bak{
+  background-color: #d4c5ac9f;
+  padding: 20px 10px 10px 300px;
+}
+
+#titles{
+  font-family: Montserrat;
+  font-size: 30px;
+}
+
+.tit1{
+  font-family: Montserrat;
+  text-align: center;
+  color:#574b43;
+}
+
+.menuItems{
+  text-align: center;
+  font-family: Montserrat;
+  color:#574b43;
+}
+
+.words{
+  text-align: left;
+  color: white;
+  font-family: Montserrat;
+  font-size: 20px;
+  padding-top: 250px;
+  padding-left: 50px;
+}
+
+.txt{
+  background-color:transparent;
+  color: white;
+  border-bottom-color: white;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  margin-right: 50px;
+}
+
+::placeholder{
+  color: white;
+}
+
+.stuff{
+  font-family: "Old Standard TT",;
+  color: #574b43;
+  font-weight:lighter
+}
+#kdiv {
+  width: 10%;
+}
+
+.room{
+  font-family: Italiana;
+  color: #574b43ce
+}
+
+.room2{
+  font-family: "Old Standard TT";
+  color: #7a726dc0;
+  font-size: 24px;
+  
+}
+
+/* modal */
+/* Set a style for all buttons */
+.modal button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.modal button:hover {
+  opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.modal .cancelbtn {
+  position: absolute;
+  right: 40%;
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.contain {
+  padding: 16px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  height: 35%;
+  z-index: 20 ;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+#message{
+  text-align: center;
+  margin-top: 6% ;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+      width: 100%;
+  }
+}

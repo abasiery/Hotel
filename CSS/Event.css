@@ -1,0 +1,324 @@
+:root {
+  --main-color:rgb(140, 130, 121);
+  --Dark:#292b2c;
+  --backgroundColor: rgba(255, 255, 255, 0.7);
+  --darkerBackgroundColor: rgba(105, 105, 105, 0.2); 
+}
+/*Nav bar*/
+nav{
+  background: var(--backgroundColor);
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+  padding:18px;
+  
+}
+/* .navbar-brand{
+  font-family: "Italiana";
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 2rem;
+} */
+.nav-item{
+  padding:0px 18px ;
+}
+.nav-link{
+  font-size: 1.2rem;
+  /* font-family: 'Montserrat-light'; */
+  color: var(--Dark) ;
+}
+.nav-link:hover{
+  color: var(--main-color);
+}
+.bg-dark{
+  background-color: var(--Dark);
+}
+    /* End of Navbar */
+#top-image{
+  width: 100%;
+  transform:scale(1.0);
+}
+
+.img2{
+  width: 50px;
+  height: 50px;
+  
+}
+
+/* .navbar-toggler{
+  position: relative;
+  left: 1370px;
+} */
+a{
+  text-decoration: none;
+}
+ /* TOP HEADING  */
+  .deepshadow{
+  color: #e0dfdc;
+  letter-spacing: .1em;
+  text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828, 
+    0 5px 0 #262626, 
+    0 6px 0 #242424, 
+    0 7px 0 #222, 
+    0 8px 0 #202020, 
+    0 9px 0 #1e1e1e, 
+    0 10px 0 #1c1c1c, 
+    0 11px 0 #1a1a1a, 
+    0 12px 0 #181818, 
+    0 13px 0 #161616, 
+    0 14px 0 #141414, 
+    0 15px 0 #121212, 
+    0 22px 30px rgba(0, 0, 0, 0.9);
+}
+.special-heading{
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(140, 130, 121 , 30%) ;
+  letter-spacing: -3px;
+}
+
+.top{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.top-headings{
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffff;
+  font-weight: bolder;
+}
+.heading{
+  text-align: center;
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  
+}
+/* .h2-heading{
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+  color: transparent;
+  font-size: 120px; 
+  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat; 
+  background: url("https://1e64.net/lw-hpm-48dbc2/uploads/00_Pictures/03_Raw/Hotel-Particulier-Montmartre----0--1--AelG.jpg" ) repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 90px;
+  letter-spacing: -8px;
+  margin-top: 100px;
+} */
+
+#p-heading{
+  margin-top: 20px;
+  font-family: cursive;
+  font-size: large;
+}
+
+.h4-section1{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-family: Italiana;
+}
+.p-section1{
+  size: 40px; 
+  font-family: Montserrat; 
+  text-align:left;
+}
+.box1{
+  background-color: #f2f3f4;
+  margin-bottom: 60px;
+}
+
+/* -------------------------------- */
+/* card details start  */
+
+.section2{
+  background-color: rgb(140, 130, 121 , 10%);
+}
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 15%;
+    left: 12%;
+    background: #1ABC9C;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 12px;
+        margin:0;
+        padding:10px 5px;
+        line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    font-family: Italiana;
+}
+
+.card-desc p {
+	color: #747373;
+    font-size: 14px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+.ROW1{
+  margin-top: 100px;
+  margin-bottom: 100PX;
+}
+
+.section2 .div1:hover img {
+  filter: grayscale(100%);
+transition: 0.3s;
+}
+/* End card section */
+
+/*Second Section*/
+.heading-section3{
+  margin-top: 10%;
+}
+.section3{
+  margin-top:-15%;
+  padding: 10%;
+}
+.section3 h4{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Italiana;
+}
+.section3 .row{
+  margin-top: 10%;
+}
+.p-section3{
+  background-color: #f2f3f4;
+  padding: 30px;
+}
+.p-section3-p{
+  margin-top: 30px;
+}
+
+/*Second Section*/
+
+/*START CONTACT*/
+.contact{
+  padding-top: 60px;
+}
+
+.contact .info{
+  padding-top: 60px;
+  text-align: center;
+}
+
+.contact .info .label{
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-top: 25px;
+  margin-bottom: 15px ;
+  color: var(--Dark);
+}
+
+.contact .info .link{
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.contact .info .social{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact .info .social i{
+  margin-left: 10px;
+  color: var(--secColor);
+}
+.special-Heading{
+  margin: 0;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(140, 130, 121 , 30%) ;
+  letter-spacing: -3px;
+}
+.ZZZ{
+  margin: -80px 0px ;
+  font-size: 40px;
+  text-align: center;
+  color: var(--main-color);
+  font-family: "Monsieur La Doulaise";
+}
+@media (max-width: 768px){
+  .special-heading{
+      font-size: 60px;
+  }
+
+  .special-heading + p{
+      margin: -20px 0;
+  }
+}
+
+@media (max-width: 767px){
+  .contact .info .label,
+  .contact .info .link {
+      font-size: 25px;
+  }
+}
+.contact .youtube{
+  color: red;
+}
+.contact .twitter{
+  color: #00acee;
+}
+/*END CONTACT*/

@@ -1,0 +1,249 @@
+/* body{
+    margin: 0%;
+} */
+:root {
+    --main-color:rgb(140, 130, 121);
+    --Dark:#292b2c;
+    --backgroundColor: rgba(255, 255, 255, 0.7);
+    --darkerBackgroundColor: rgba(105, 105, 105, 0.2); 
+}
+/* nav */
+nav{
+    background:#8c827923;;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+    padding:18px;
+    
+}
+/* .navbar-brand{
+    font-family: "Italiana";
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+  } */
+.nav-item{
+    padding:0px 18px ;
+}
+.nav-link{
+    font-size: 1.2rem;
+    /* font-family: 'Montserrat-light'; */
+    color: var(--Dark) ;
+}
+.nav-link:hover{
+    color: var(--main-color);
+}
+.bg-dark{
+    background-color: var(--Dark);
+}
+/* End of navbar */
+.Top{
+    position: relative;
+    text-align: center;
+    color: white
+}
+.top-image{
+    width: 100%;
+    transform:scale(1.0);
+}
+.top-p{
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffff;
+    font-weight: bolder;
+    }
+.Top-h{
+    font-size: 80px;
+    /* font-family: 'Montserrat', sans-serif; */
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+/* ---section1---- */
+.a-sec1{
+    text-decoration: none;
+    color:white;
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+.a-sec1:hover{
+    color: white;
+}
+.a2-section1{
+    padding-right: 100px;
+    font-size: 3rem;
+
+}
+.section1{
+    margin-top:-15%;
+    padding: 10%;
+    text-align: center;
+    background-color: rgb(210,182,177);
+}
+.section1 p{
+    margin-top: 20px;
+}
+.section1 h4{
+    font-size: 40px;
+    /* font-family: 'Montserrat', sans-serif; */
+    margin-bottom: 30px;
+}
+.section1 .row{
+    margin-top: 10%;
+}
+.p-section1{
+    padding: 30px;
+}
+.p-section1-p{
+    margin-top: 60px;
+}
+
+/* ---section2----- */
+
+.box{
+    position: relative;
+    width: 550px;
+    height: 350px;
+    background-color: transparent;
+    background-image: linear-gradient(-180deg, #CC394E 0%, #DE2540 100%);
+    border-radius:15px;
+    cursor:pointer;
+}
+.box:before{
+    content: "";
+    width: 450px;
+    height: 30px;
+    background: transparent radial-gradient(closest-side at 68% 50%, #CC394E 0%, #DE2540 100%);
+    border-radius: 30px;
+    opacity: 0;
+    filter: blur(35px);
+    bottom: 0rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transition: all 0.2s ease-in;
+}
+img{
+    width: 400px;
+    top:0;
+    transition: all 0.2s ease-in;
+}
+.img2{
+    width: 50px;
+    height: 50px;
+    
+}
+.box:hover:before{
+    opacity: 1;
+}
+.box:hover img{
+    transform: rotate(15deg) scale(1.1);
+}
+.bbox2{
+    background-color: #000000;
+}
+.box2{
+    position: relative;
+    padding-top: 100px;
+}
+.image1{
+    margin-left: 100px;
+} 
+.txt-img{
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    color: #ffff;
+}
+.box2 h6{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.txt-img2{
+    position: absolute;
+    top: 450px;
+    right: 300px;
+    color: #ffff;
+}
+/*START CONTACT*/
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contact .info{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .info .label{
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-top: 25px;
+    margin-bottom: 15px ;
+    color: var(--Dark);
+}
+
+.contact .info .link{
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact .info .social{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact .info .social i{
+    margin-left: 10px;
+    color: var(--secColor);
+}
+.special-heading{
+    margin: 0;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(140, 130, 121 , 30%) ;
+    letter-spacing: -3px;
+}
+
+.special-heading + p{
+    margin: -80px 0px ;
+    font-size: 40px;
+    text-align: center;
+    color: var(--main-color);
+    font-family: "Monsieur La Doulaise";
+}
+@media (max-width: 768px){
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p{
+        margin: -20px 0;
+    }
+}
+
+@media (max-width: 767px){
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 25px;
+    }
+}
+.contact .youtube{
+    color: red;
+}
+.contact .twitter{
+    color: #00acee;
+}
+/*END CONTACT*/

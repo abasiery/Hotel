@@ -1,0 +1,68 @@
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hs{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.left{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-60%);
+    transition: all 1s;
+    font-family:'Italiana';
+    font-weight: bold;
+}
+
+.right{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(60%);
+    transition: all 1s;
+    font-family:'Italiana';
+    font-weight: bold;
+}
+
+.h22{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 4s;
+}
+
+.hslow{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 2s;
+}
+
+.head{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 2s;
+}
+
+.basic{
+    opacity: 0;
+    filter: blur(5px);
+    filter: brightness(200%);
+    transform: scale(200%);
+    transition: all 2s;
+}
+
+.show{
+    filter: blur(0);
+    transform: scale(100%);
+    filter: brightness(100%);
+    opacity: 1;
+    transform: translateX(0);
+}
