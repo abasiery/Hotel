@@ -1,1 +1,1 @@
-TinDog Starting Files
+JAM Hotel WebSite
