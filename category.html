@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <!-- NORMAILZE CSS FILE -->
+    <link rel="stylesheet" href="CSS/normailze.css"/>
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="CSS/all.min.css"/>
+    <!-- bootstrap library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="CSS/category.css">
+    <link rel="stylesheet" href="CSS/anim.css"/>
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Monsieur+La+Doulaise&family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script defer src="JS/animation.js"></script>
+</head>
+<body>
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #8c827923; color: #8c827923;">
+    <a class="navbar-brand" href="#">
+        <img src="imgs/NoBackgroundLogo.png" alt="" width="50" height="50"/>
+    </a>
+    <!-- <a class="navbar-brand" href="#"> JAM Luxury hotel </a> -->
+    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto">
+            <li class="navbar nav-item">
+                <a  class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="navbar nav-item">
+                <a  class="nav-link" href="Dates.html">Rooms</a>
+            </li>
+            <li class="navbar nav-item">
+                <a  class="nav-link" href="Restaurant.html">Restaurant</a>
+            </li>
+            <li class="navbar nav-item">
+                <a  class="nav-link" href="Events.html">Event</a>
+            </li>
+            <li class="navbar nav-item">
+                <a  class="nav-link" href="Contactus.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Step progress Bar -->
+    <div class="step">
+        <ul class="progressbar">
+            <li class="active">Dates</li>
+            <li class="activex">Category</li>
+            <li>Details</li>
+        </ul>
+        <ul>
+            <li><i class="fa-sharp fa-solid fa-check"></i></li>
+            <li><i class="fa-solid fa-door-closed"></i></li>
+            <li><i class="fa-solid fa-user"></i></li>
+        </ul>
+    </div>
+    <!--Select-->
+    <div class="special-heading">
+        Categories
+    </div>
+
+    <!-- cards -->
+    <div class="holder">
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card card-block">
+        
+                            <div id="carouselIndicator1" class="carousel slide"  data-bs-interval="false">
+                                <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselIndicator1" data-bs-slide-to="0" class="active" aria-current="true" ></button>
+                                <button type="button" data-bs-target="#carouselIndicator1" data-bs-slide-to="1" ></button>
+                                </div>
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="imgs/room2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imgs/room3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicator1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--the arrow -->
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicator1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span> <!--the arrow -->
+                                </button>
+                            </div>
+        
+        
+                        <h5 class="card-title mt-3 mb-3">MARINA HARBOUR DOUBLE QUEEN ROOM</h5>
+                        <p class="description">DESCRIPTION </p>
+                        <p>Situated in the Marina Rise building, the 63 sqm/678 sqft Marina Harbour Rooms offer exceptional views of Cape Town’s bustling Victoria & Alfred Waterfront from a large private balcony.</p>
+                        <div class="persons">
+                            <i class="fa-regular fa-user"></i><p>Maximum persons: 4</p>
+                        </div>
+                        <h6>€850.00<span class="nightly"> nightly</spanp></h6>
+                        <button id="select1" type="button" class="btn btn-outline-dark mt-4" onclick="select(this)">Select</button>
+                        
+                        
+                    </div>
+                </div>
+        
+        
+                <div class="col-md-6 col-sm-12">
+                    <div class="card card-block">
+                        <div id="carouselIndicator2" class="carousel slide"  data-bs-interval="false">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIndicator2" data-bs-slide-to="0" class="active" aria-current="true" ></button>
+                            <button type="button" data-bs-target="#carouselIndicator2" data-bs-slide-to="1" ></button>
+                            <button type="button" data-bs-target="#carouselIndicator2" data-bs-slide-to="2" ></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imgs/suite1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imgs/suite2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imgs/suite3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicator2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--the arrow -->
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicator2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span> <!--the arrow -->
+                            </button>
+                        </div>
+        
+        
+                    <h5 class="card-title mt-3 mb-3">MARINA GRAND SUITE</h5>
+                    <p class="description">DESCRIPTION </p>
+                    <p>Expansive and picturesque, the 155 sqm/1668 sqft One Bedroom Marina Grand Suites are located in the crescent-shaped Marina Rise. The bedroom features one King size bed and offers amazing views of Table Mountain.</p>
+                    <div class="persons">
+                        <i class="fa-regular fa-user"></i><p>Maximum persons: 3</p>
+                    </div>
+                    <h6>€790.00<span class="nightly"> nightly</spanp></h6>
+                    <button id="select2" type="button" class="btn btn-outline-dark mt-4" onclick="select(this)">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row"> <!-- second row of cards -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="card card-block">
+        
+                            <div id="carouselIndicator3" class="carousel slide"  data-bs-interval="false">
+                                <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselIndicator3" data-bs-slide-to="0" class="active" aria-current="true" ></button>
+                                <button type="button" data-bs-target="#carouselIndicator3" data-bs-slide-to="1" ></button>
+                                <button type="button" data-bs-target="#carouselIndicator3" data-bs-slide-to="2" ></button>
+                                <button type="button" data-bs-target="#carouselIndicator3" data-bs-slide-to="3" ></button>
+                                </div>
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="imgs/penthouse1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imgs/penthouse2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imgs/penthouse3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imgs/penthouse4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicator3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--the arrow -->
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicator3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span> <!--the arrow -->
+                                </button>
+                            </div>
+        
+        
+                        <h5 class="card-title mt-3 mb-3">LION'S HEAD PENTHOUSE</h5>
+                        <p class="description">DESCRIPTION </p>
+                        <p>The Lion’s Head Penthouse is the latest ultra-luxury offering from JAM,s ultimate accommodation choice for the discerning traveller who understands and appreciates luxury. Perfect for friends and families. </p>
+                        <div class="persons">
+                            <i class="fa-regular fa-user"></i><p>Maximum persons: 8</p>
+                        </div>
+                        <h6>€1,250.00<span class="nightly"> nightly</spanp></h6>
+                        <button id="select3" type="button" class="btn btn-outline-dark mt-4" onclick="select(this)">Select</button>
+                        
+                        
+                    </div>
+                </div>
+        
+        
+                <div class="col-md-6 col-sm-12">
+                    <div class="card card-block">
+                        <div id="carouselIndicator4" class="carousel slide"  data-bs-interval="false">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIndicator4" data-bs-slide-to="0" class="active" aria-current="true" ></button>
+                            <button type="button" data-bs-target="#carouselIndicator4" data-bs-slide-to="1" ></button>
+                            <button type="button" data-bs-target="#carouselIndicator4" data-bs-slide-to="2" ></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imgs/grandsuite1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imgs/grandsuite2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imgs/grandsuite3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicator4" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--the arrow -->
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicator4" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span> <!--the arrow -->
+                            </button>
+                        </div>
+        
+        
+                    <h5 class="card-title mt-3 mb-3">TWO BEDROOM ISLAND FAMILY SUITE</h5>
+                    <p class="description">DESCRIPTION </p>
+                    <p>Located on the second and third floors of the Marina Rise building, with expansive living area and two bedrooms, these suites are ideal for families and entertaining, indulging guests of all ages with every conceivable luxury.</p>
+                    <div class="persons">
+                        <i class="fa-regular fa-user"></i><p>Maximum persons: 6</p>
+                    </div>
+                    <h6>€1000.00<span class="nightly"> nightly</spanp></h6>
+                    <button id="select4" type="button" class="btn btn-outline-dark mt-4" onclick="select(this)">Select</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>  
+        </div>
+        
+<!-- amenities -->
+<div class="amenities">
+    <div class="special-heading"> ROOM AMENITIES </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div>
+                <div class="frame">
+                    <img src="imgs/balcony.jfif" alt="balacony">
+                </div>
+                <p>BALCONY</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <img src="imgs/minibar.jfif" alt="minibar">
+                <p>MINIBAR</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <img src="imgs/tv.jfif" alt="tv">
+                <p>TV</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <img src="imgs/en-suite-checkin-in.jfif" alt="IN-SUITE CHECK-IN">
+                <p>IN-SUITE CHECK-IN</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <img src="imgs/hair-dryer.jfif" alt="hair-dryer">
+                <p>HAIR DRYER</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <img src="imgs/room-service.jfif" alt="room-service">
+                <p>24 HOURS ROOM SERVICEy</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+
+<!-- extra packages -->
+<div class="extras container">
+    <div class="special-heading"> Extra Spoiling </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <div class="card" >
+                <img class="card-img-top" src="imgs/breakfast.jfif" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Classic Breakfast</p>
+                    <p class="description">Formule composée d'une boisson chaude, d'un jus de fruit pressé, de viennoiseries, de pain frais, et fromage blanc.</p>
+                    <div class="hold row">
+                        <div class="price col-xs-12 col-md-6">€20.00</div>
+                        <button id="add1" type="button" class="btn btn-outline-dark mt-4 col-xs-12 col-md-6" onclick="add(this)">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <div class="card" >
+                <img class="card-img-top" src="imgs/lunch.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Our Special Lunch</p>
+                    <p class="description">Formule composée d'une boisson chaude, d'un jus de fruit pressé, de viennoiseries, de pain frais, et fromage blanc.</p>
+                    <div class="hold row">
+                        <div class="price col-xs-12 col-md-6">€20.00</div>
+                        <button id="add2" type="button" class="btn btn-outline-dark mt-4 col-xs-12 col-md-6" onclick="add(this)">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <div class="card" >
+                <img class="card-img-top" src="imgs/dinner.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text"> Tasty Dinner</p>
+                    <p class="description">Formule composée d'une boisson chaude, d'un jus de fruit pressé, de viennoiseries, de pain frais, et fromage blanc.</p>
+                    <div class="hold row">
+                        <div class="price col-xs-12 col-md-6">€20.00</div>
+                        <button id="add3" type="button" class="btn btn-outline-dark mt-4 col-xs-12 col-md-6" onclick="add(this)">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <div class="card" >
+                <img class="card-img-top" src="imgs/RomanticPack.jfif" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Romantic Pack</p>
+                    <p class="description">C'est toujours mieux avec des fleurs !Embellissez votre séjour avec un bouquet de fleurs fraiches composé .</p>
+                    <div class="hold row">
+                        <div class="price col-xs-12 col-md-6">€20.00</div>
+                        <button id="add4" type="button" class="btn btn-outline-dark mt-4 col-xs-12 col-md-6" onclick="add(this)">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <button id="next" type="button" class="btn"  style=" width:150px; color:#ffffff ; background-color: #8b7d74; border-width: 0ch; font-size: 25px;margin-left:45%; margin-top:1rem;font-family: Quicksand;">Next Step !</button>                   
+            <!-- <button id="addRoom" type="button" class="btn"  style=" width:250px; color:#ffffff ; background-color: #8b7d74; border-width: 0ch; font-size: 25px;margin-left:41%; margin-top:1rem;font-family: Quicksand;" >Add Another Room !</button>                    -->
+</div>
+
+<!-- Contact -->
+<div class="contact basic">
+    <div class="container basic">
+        <div class="special-heading basic">Contact</div>
+        <p>Your home away from home </p>
+        <div class="info basic">
+            <p class="label basic">Feel free to drop us a line at:</p>
+            <a href="mailto:jamagency@mail.com?subject=Contact" class="link basic">Jam_agency@mail.com</a>
+            <div class="social basic">
+                Find Us On Social Networks
+                        <a class="youtube basic" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a class="facebook basic" href="https://www.facebook.com/?stype=lo&jlou=Aff9r0KXmEDFE5ZOk04pKS-8wS5mk18oqCy_ny91e6ldNITnk1VqObsWxyxIey9H3N-6_hQfiwHpCUDZJw79C794Ak6p_wy7bTdKf69lXYNRyg&smuh=10442&lh=Ac8dw2bEfk8G-d6yAJc"><i class="fab fa-facebook-f"></i></a>
+                        <a class="twitter basic" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="id01" class="modal">
+        
+    <div class="modal-content animate">
+        <div>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="contain">
+            <p id="message"></p>
+            <div class="contain" >
+            <button type="button" id="abasiery" onclick="myFunction()" class="cancelbtn">Okay</button>
+        </div>
+    </div>
+</div>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        var booked_room = 0 ;
+        var extras = 0 ;
+        // var adding = 0 ;
+
+        const NextBtn = document.getElementById('next');
+        NextBtn.addEventListener('click' , change);
+        async function change(e){
+            e.preventDefault();
+
+            if(booked_room == 0 )  {
+                alert( "no room was selected") ;
+                return 
+            }
+
+            const baseUrl = 'http://localhost:8282/category' ;
+            // console.log(check_in.value);
+            // console.log(check_out.value);
+            await fetch(baseUrl,
+            {   method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify({     
+                    parcel_book : booked_room,
+                    parcel_extra : extras })
+            }).then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            })
+
+            window.location = "details.html";
+        }
+
+        function select(elem){
+            if(document.getElementById(elem.id).style.backgroundColor!="rgb(87, 75, 67)"){
+                document.getElementById(elem.id).style.backgroundColor="rgb(87, 75, 67)";
+                document.getElementById(elem.id).style.color="white";
+                document.getElementById(elem.id).innerHTML="Selected <i class=\"fa-sharp fa-solid fa-check\"></i>";
+                if(elem.id == "select1"){
+                    booked_room = 1 ;
+                    document.getElementById("select2").style.backgroundColor="";
+                    document.getElementById("select2").style.color="";
+                    document.getElementById("select2").innerHTML="Select";
+
+                    document.getElementById("select3").style.backgroundColor="";
+                    document.getElementById("select3").style.color="";
+                    document.getElementById("select3").innerHTML="Select";
+
+                    document.getElementById("select4").style.backgroundColor="";
+                    document.getElementById("select4").style.color="";
+                    document.getElementById("select4").innerHTML="Select";
+                }
+
+                else if(elem.id == "select2"){
+                    booked_room = 2 ;
+                    document.getElementById("select1").style.backgroundColor="";
+                    document.getElementById("select1").style.color="";
+                    document.getElementById("select1").innerHTML="Select";
+
+                    document.getElementById("select3").style.backgroundColor="";
+                    document.getElementById("select3").style.color="";
+                    document.getElementById("select3").innerHTML="Select";
+
+                    document.getElementById("select4").style.backgroundColor="";
+                    document.getElementById("select4").style.color="";
+                    document.getElementById("select4").innerHTML="Select";
+                }
+
+                else if(elem.id == "select3"){
+                    booked_room = 3 ;
+                    document.getElementById("select2").style.backgroundColor="";
+                    document.getElementById("select2").style.color="";
+                    document.getElementById("select2").innerHTML="Select";
+
+                    document.getElementById("select1").style.backgroundColor="";
+                    document.getElementById("select1").style.color="";
+                    document.getElementById("select1").innerHTML="Select";
+
+                    document.getElementById("select4").style.backgroundColor="";
+                    document.getElementById("select4").style.color="";
+                    document.getElementById("select4").innerHTML="Select";
+                }
+
+                else if(elem.id == "select4"){
+                    booked_room = 4 ;
+                    document.getElementById("select2").style.backgroundColor="";
+                    document.getElementById("select2").style.color="";
+                    document.getElementById("select2").innerHTML="Select";
+
+                    document.getElementById("select3").style.backgroundColor="";
+                    document.getElementById("select3").style.color="";
+                    document.getElementById("select3").innerHTML="Select";
+
+                    document.getElementById("select1").style.backgroundColor="";
+                    document.getElementById("select1").style.color="";
+                    document.getElementById("select1").innerHTML="Select";
+                }
+
+            }
+            else{
+                document.getElementById(elem.id).style.backgroundColor="";
+                document.getElementById(elem.id).style.color="";
+                document.getElementById(elem.id).innerHTML="Select";
+            }
+        }
+
+        function add(elem){
+            if(document.getElementById(elem.id).style.backgroundColor!="rgb(87, 75, 67)"){
+                document.getElementById(elem.id).style.backgroundColor="rgb(87, 75, 67)";
+                document.getElementById(elem.id).style.color="white";
+                document.getElementById(elem.id).innerHTML="Added <i class=\"fa-sharp fa-solid fa-check\"></i>";
+                extras= extras + 1 ;
+            }
+            else{
+                document.getElementById(elem.id).style.backgroundColor="";
+                document.getElementById(elem.id).style.color="";
+                document.getElementById(elem.id).innerHTML="Add";
+                extras= extras - 1 ;
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

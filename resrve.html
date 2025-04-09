@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- NORMAILZE CSS FILE -->
+    <link rel="stylesheet" href="CSS/normailze.css"/>
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Monsieur+La+Doulaise&family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Hotelcss.css">  
+    <!-- <script src="JS/resTableForm.js" type="text/javascript"></script> -->
+</head>
+    <body onload="load()" >
+        
+        <nav class="navbar navbar-expand-lg" style="background-color: #8c827923; color: #8c827923;">
+            <a class="navbar-brand" href="#">
+                <img src="imgs/NoBackgroundLogo.png" alt="" width="50" height="50"/>
+            </a>
+            <!-- <a class="navbar-brand" href="#"> JAM Luxury hotel </a> -->
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar nav-item">
+                        <a  class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar nav-item">
+                        <a  class="nav-link" href="Dates.html">Rooms</a>
+                    </li>
+                    <li class="navbar nav-item">
+                        <a  class="nav-link" href="Restaurant.html">Restaurant</a>
+                    </li>
+                    <li class="navbar nav-item">
+                        <a  class="nav-link" href="Events.html">Event</a>
+                    </li>
+                    <li class="navbar nav-item">
+                        <a  class="nav-link" href="Contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="container" style="width: 2000px; background-color: #9e8c7d;">
+            <h1 class="fishes" style="font-family: Italiana; font-weight: bold; color:#574b43; padding: 20px;">Reserve Your Table</h1>
+            <h1 class="top2" style="font-family: Monsieur La Doulaise; color:#e3dcd8dd; padding: 20px; font-size: 50px;">   reserve your table</h1>
+            <div class="row">
+                <div class="col">
+                    <p class="words">
+                        To request the availablility of a table 
+                        <br> please fill in this form. You will automatically 
+                        <br>receive an email confirming that your request 
+                        <br>is being handled by our Restaurant Team.
+                    </p>
+                </div>
+                <div class="col" style="padding-top: 70px; padding-bottom: 80px;">
+                    <form method="post" >
+                        <input type="text" onchange="checkName()" name ="name " id="name" placeholder="First Name*" class="txt" >
+                        <input type="text" onchange="checkLName()"  name ="lname " id="lname" placeholder="Last Name*"  class="txt"><br><br><br>
+                        <input type="text" onchange="checkPhoneNumber()" name = "phone" id="phone" placeholder="Phone*"class="txt">
+                        <input type="email" onchange="checkEmail()" class="txt" id="email" placeholder="Email*"><br><br><br>
+                        <input placeholder="Date" type="date" id="Date" min=" " required  class="txt" style="margin-right: 100px; padding-right: 45px;">
+                        <input type="time" id="timing" class="txt" required pattern="\d{2}:d{2} " placeholder="Time*" ><br><br><br>
+                        <input id="noTables" type="number" style="width: 30%;" class="txt" min="1" max="20" required pattern="\d" placeholder="Number of Guests*"><br><br><br>
+                        <textarea placeholder="Any Special Requests?" id="description" class="txt" aria-setsize="100px" style="margin: 3%;"></textarea>
+                        <select class="form-select" aria-label="Default select example" id="Meal" style="width: 30%; position: relative; margin: 3% ;float: left;margin-left: 0;background-color: #e8905600;">
+                            <option value="" selected>Select Meal</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Lunch">Lunch</option>
+                        </select>
+                        <br>
+                        <input type="checkbox" id="check" onclick="load()"> Remember Me 
+                        <br><br><br><button   id="reserve" type="button" class="formbtn" style="color:#ffffff ; background-color: #574b43; border-width: 0ch ; font-family: Italiana;font-weight: bold ; width: 20%; margin-left:20% ;" >SUBMIT</button><br><br><br>
+                        <!-- <input id="myinput" type="checkbox">Receive emails about our newest events and offers -->
+                    </form>  
+                </div>
+            </div>
+        </div>
+        <br><br>
+        
+<!-- Modal -->
+<div id="id01" class="modal">
+    
+    <div class="modal-content animate" id="merna">
+        <div>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="contain">
+            <p id="message"></p>
+            <div class="contain" >
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- --------------------------------------------- -->
+<script>
+var modal = document.getElementById('id01')
+
+var c = 0
+var clicked=true ;
+
+function load()
+{
+    var doesExist = localStorage.getItem("myObj");
+    var doesExistLast = localStorage.getItem("myObjLast");
+    var doesExistEmail = localStorage.getItem("myObjEmail");
+    var doesExistPhone = localStorage.getItem("myObjPhone");
+    if(c%2==0)
+   {
+    console.log(c);
+    clicked = false; 
+    console.log("FUCNXTIONN Clicked");
+    console.log(clicked);
+    c++;  
+   }
+   else
+   {
+    console.log(c);
+    clicked=true;
+    console.log("FUCNXTIONN Clicked");
+    console.log(clicked);
+    c++;
+    // return clicked;
+   }
+   
+    console.log("INSIDE THE FIRST FUNCTION " + clicked);
+    if(clicked)
+        {
+        
+        console.log("IF CHECKED "+ clicked);
+
+        
+        if (doesExist)
+        {
+            document.getElementById("name").value = JSON.parse(doesExist).Fname;
+            console.log("KNOCK ON MY DOOR ")
+        }
+
+        if (doesExistLast)
+        {
+            document.getElementById("lname").value = JSON.parse(doesExistLast).Lname;
+        }
+
+        if (doesExistEmail)
+        {
+            document.getElementById("email").value = JSON.parse(doesExistEmail).Mail;
+        }
+        if (doesExistPhone)
+        {
+            document.getElementById("phone").value = JSON.parse(doesExistPhone).Phone;
+        }
+    }
+    else
+    {
+        window.localStorage.clear();
+        clicked = false;
+        if (doesExist)
+        {
+            document.getElementById("name").value = JSON.parse(doesExist).Fname;
+            console.log("KNOCK ON MY DOOR ")
+        }
+
+        if (doesExistLast)
+        {
+            document.getElementById("lname").value = JSON.parse(doesExistLast).Lname;
+        }
+
+        if (doesExistEmail)
+        {
+            document.getElementById("email").value = JSON.parse(doesExistEmail).Mail;
+        }
+        if (doesExistPhone)
+        {
+            document.getElementById("phone").value = JSON.parse(doesExistPhone).Phone;
+        }
+        console.log("IF NOT CHECKED "+clicked);
+    }
+}
+
+
+
+function checkName(){
+        var modal = document.getElementById('id01') 
+        const fn = document.getElementById('name').value;
+        var fnREGEX = /^[a-zA-Z\s]{3,20}$/
+        var fnResult = fnREGEX.test(fn);
+        if(fnResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Name"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("name").value=""
+        }
+            
+        let myObj ={
+                    Fname:fn
+                };
+                let myObjSer =JSON.stringify(myObj);
+                localStorage.setItem("myObj",myObjSer);
+                let myObjDes = JSON.parse(localStorage.getItem("myObj"));
+                // console.log(myObjDes);
+                // document.getElementById("name").value=myObjDes.Fname;
+        
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    }
+        function checkLName(){
+        var modal = document.getElementById('id01') 
+        const ln = document.getElementById('lname').value;
+        var lnREGEX = /^[a-zA-Z\s]{3,}$/
+        var lnResult = lnREGEX.test(ln);
+        if(lnResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Name"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("lname").value=""
+        }
+
+        let myObjLast ={
+                    Lname:ln
+                };
+                let myObjSer =JSON.stringify(myObjLast);
+                localStorage.setItem("myObjLast",myObjSer);
+                let myObjDes = JSON.parse(localStorage.getItem("myObjLast"));
+        
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        function checkEmail(){
+        var modal = document.getElementById('id01')
+        const email = document.getElementById('email').value;
+        var eREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+[/.]{1}[a-zA-Z]+$/;
+        var eres = eREGEX.test(email);
+        if(eres == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Email"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("email").value=""
+        }
+
+        let myObjEmail ={
+                    Mail:email
+                };
+                let myObjSer =JSON.stringify(myObjEmail);
+                localStorage.setItem("myObjEmail",myObjSer);
+                let myObjDes = JSON.parse(localStorage.getItem("myObjEmail"));
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        function checkPhoneNumber(){
+        var modal = document.getElementById('id01')
+        const p = document.getElementById('phone').value;
+        var pREGEX = /^[0]{1}[0-9]{10}$/
+        var pres = pREGEX.test(p);
+        if(pres == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Phone Number <br> Using this Formats <br> (123) 456-7890<br>(123)456-7890<br>123-456-7890<br>1234567890"
+        document.getElementById('merna').style.height='45%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("phone").value=""
+        }
+
+        let myObjPhone ={
+                    Phone:p
+                };
+                let myObjSer =JSON.stringify(myObjPhone);
+                localStorage.setItem("myObjPhone",myObjSer);
+                let myObjDes = JSON.parse(localStorage.getItem("myObjPhone"));
+
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }   
+        }
+        }
+        
+
+const ReserveBtn= document.getElementById("reserve")
+ReserveBtn.addEventListener('click',validate)
+async function validate(e){
+    var date = new Date();
+    const c1 = document.getElementById("Date").value
+const fn = document.getElementById('name').value;
+const ln = document.getElementById('lname').value;
+const email = document.getElementById('email').value;
+const p = document.getElementById('phone').value;
+const Meal = document.getElementById("Meal").value;
+const Description= document.getElementById("description").value; 
+const NoTables = document.getElementById("noTables").value;
+const Timing = document.getElementById("timing").value;
+
+
+
+    e.preventDefault();
+    
+// var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+var current_date = "2023-01-09"
+if(current_date>c1){
+    document.getElementById('message').innerHTML="Check in date invalid.<br>Cannot submit a date before today"
+    document.getElementById('id01').style.display='block'
+    document.getElementById("Date").value=''
+    alert(current_date)
+}
+
+    if (fn.length==0 || ln.length==0 || email.length==0 || p.length==0 || Meal.length==0  ||  Timing.length==0 || NoTables.length==0 ){
+                document.getElementById('message').innerHTML="Please Fill all your Informations"
+                document.getElementById('merna').style.height='30%'
+                document.getElementById('id01').style.display='block'
+            }
+else{
+    
+    const baseUrl = 'http://localhost:8282/reserve' ;
+                await fetch(baseUrl,
+                {   method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                        },
+                    body: JSON.stringify({     
+                        parcel_Fname : fn,
+                        parcel_Lname : ln,
+                        parcel_Email : email,
+                        parcel_Phone : p,
+                        parcel_Bdate : c1,
+                        parcel_Description : Description,
+                        parcel_NoTables   :  NoTables,
+                        parcel_Timing  : Timing ,
+                        parcel_Meal  : Meal
+                        })
+                }).then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                })
+                
+                document.getElementById('message').innerHTML="Reserving you was a Pleasure ❤️❤️❤️"
+                document.getElementById('merna').style.height='30%'
+                document.getElementById('id01').style.display='block'
+}
+window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        
+
+}
+
+setTimeout(function(){
+        window.location='Restaurant.html';
+    },2000)
+
+
+</script>
+    </body>
+</html> 

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/e8511a91bc.js" crossorigin="anonymous"></script>
+      <!-- NORMAILZE CSS FILE -->
+      <link rel="stylesheet" href="normailze.css"/>
+<!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Monsieur+La+Doulaise&family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Hotelcss.css">  
+    <script defer src="JS/animation.js"></script>
+    <link rel="stylesheet" href="CSS/anim.css"/>
+
+</head>
+
+  <body style="overflow-x: hidden;">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #8c827923; color: #8c827923;">
+      <a class="navbar-brand" href="#">
+          <img src="imgs/NoBackgroundLogo.png" alt="" width="50" height="50"/>
+      </a>
+      <!-- <a class="navbar-brand" href="#"> JAM Luxury hotel </a> -->
+      <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+              <li class="navbar nav-item">
+                  <a  class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="navbar nav-item">
+                  <a  class="nav-link" href="Dates.html">Rooms</a>
+              </li>
+              <li class="navbar nav-item">
+                  <a  class="nav-link" href="Restaurant.html">Restaurant</a>
+              </li>
+              <li class="navbar nav-item">
+                  <a  class="nav-link" href="Events.html">Event</a>
+              </li>
+              <li class="navbar nav-item">
+                  <a  class="nav-link" href="Contactus.html">Contact</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+      
+      
+      <div class="row" style="background-color:#d4c5ac81 ;">
+        <div class="col" style="padding: 100px 40px 40px 40px;">
+          <h3 style="font-size: 65px; font-family: Italiana; color:#574b43">SENSORY DINING EXPERIENCES</h3>
+          <br>
+
+          <p style="font-size:18px; font-family: Montserrat; text-align:left;color:#574b43;">
+            JAM's is a progression of rare and beautiful ingredients where texture, flavour and harmony is paramount.
+
+            Continually inspired by nature, the creative process for chef Peter Gilmore begins in working closely with the farmers,
+            fishermen, producers and artisans who cultivate bespoke produce exclusively for JAM. For each dish, the growth of every element and the selection of every ceramic piece is carefully considered and crafted for its role in the dining experience.
+            
+            JAM's brings a personal, interactive passage for diners through Peter Gilmore’s culinary evolution.
+          </p>
+        </div>
+        <div class="col">
+            <img src="Images\quayweb2-1-1200x1228.jpg"  width="750px" height="700px" >  
+        </div>
+      </div>
+      <div class="container-fluid" style="height: 90px;" id="bak">
+        <div class="row" >
+          <div class="col order-first" id="titles">
+            <button class="buttons" id="breakfast" onclick="breakfast()">Breakfast</button>    
+          </div>
+          <div class="col" id="titles" >
+            <button class="buttons" id="dine" onclick="dining()">Dinning</button>
+          </div>
+          <div class="col order-last" id="titles" >
+            <button class="buttons" id="dessert" onclick="dessert()">Desserts</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="padding-top: 30px;background-color: #ebded57f;">
+        <h2 class="tit1 head" id="head">
+          Breakfast available from 7am until 10 am
+        </h2>
+        <div class="menuItems " id="items" >
+            <br><br>
+            <p class="right" id="i1">FRITTATA</p><br>
+            
+            <!-- <p class="basic" style="font-family:Italiana;" >Bacon, egg, cheese, and vegetables</p><br> -->
+            <p class="left" id="i2"> ITALIAN BAKED EGGS & SAUSAGE</p>
+            <br>
+            <p class="right" id="i3">RICOTTA PANCAKES</p>
+            <br>
+            <p class="left" id="i4">CROISSANT</p>
+            <br>
+            <p class="right" id="i5">BRIOCHE</p>
+            <br>
+            <p  class="left" id="i6">CANNOLI</p>
+            <br>
+            <p class="right" id="i7">ZEPPOLE ITALIAN DONUTS</p>
+            <br>
+            <p class="left" id="i8">ITALIAN BRUNCH TORTE</p>
+            <br>
+            <p class="right" id="i9">ITALIAN BRUNCH CASSEROLE</p>
+            <br>
+            <p class="left" id="i10">CIAMBELLA</p>
+            <br>
+            <p class="right" id="i11">SICILIAN BRIOCHE</p>
+            <br>
+            <p class="left" id="i12">TIRAMISU</p>
+            <br>
+            <p class="right" id="i13">CAPPUCCINO</p>
+            <br><br>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="container">
+            <div class="special-heading">Contact</div>
+            <p>Your home away from home </p>
+            <div class="info">
+                <p class="label">Feel free to drop us a line at:</p>
+                <a href="mailto:jamagency@mail.com?subject=Contact" class="link">Jam_agency@mail.com</a>
+                <div class="social">
+                    Find Us On Social Networks
+                        <a class="youtube" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a class="facebook" href="https://www.facebook.com/?stype=lo&jlou=Aff9r0KXmEDFE5ZOk04pKS-8wS5mk18oqCy_ny91e6ldNITnk1VqObsWxyxIey9H3N-6_hQfiwHpCUDZJw79C794Ak6p_wy7bTdKf69lXYNRyg&smuh=10442&lh=Ac8dw2bEfk8G-d6yAJc"><i class="fab fa-facebook-f"></i></a>
+                        <a class="twitter" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      var b1 = document.getElementById('breakfast');
+      var b2 = document.getElementById('dine');
+      var b3 = document.getElementById('dessert');
+      function breakfast()
+      {
+        document.getElementById('head').innerHTML="Breakfast available from 7am until 10 am";
+        document.getElementById('i1').innerHTML="FRITTATA";
+        document.getElementById('i2').innerHTML="ITALIAN BAKED EGGS & SAUSAGE";
+        document.getElementById('i3').innerHTML="RICOTTA PANCAKES";
+        document.getElementById('i4').innerHTML="CROISSANT";  
+        document.getElementById('i5').innerHTML="BRIOCHE";
+        document.getElementById('i6').innerHTML="CANNOLI";
+        document.getElementById('i7').innerHTML="ZEPPOLE ITALIAN DONUTS";
+        document.getElementById('i8').innerHTML="ITALIAN BRUNCH TORTE";
+        document.getElementById('i9').innerHTML="ITALIAN BRUNCH CASSEROLE";
+        document.getElementById('i10').innerHTML="CIAMBELLA";
+        document.getElementById('i11').innerHTML="SICILIAN BRIOCHE";
+        document.getElementById('i12').innerHTML="TIRAMISU";
+        document.getElementById('i13').innerHTML="CAPPUCCINO";
+      }
+
+      function dining()
+      {
+
+        document.getElementById("head").innerHTML="Dinning Menu";
+        document.getElementById('i1').innerHTML="Carbonara Pizza";
+        document.getElementById('i2').innerHTML="Easy Chicken Parm";
+        document.getElementById('i3').innerHTML="Slow-Cooker Chicken Cacciatore";
+        document.getElementById('i4').innerHTML="Cacio e Pepe";  
+        document.getElementById('i5').innerHTML="Italian Sausage & Pepper Frittata Affogato";
+        document.getElementById('i6').innerHTML="Pasta Pomodoro";
+        document.getElementById('i7').innerHTML="Sheet-Pan Panzanella";
+        document.getElementById('i8').innerHTML="Ricotta Gnudi";
+        document.getElementById('i9').innerHTML="Caprese Chicken Saltimbocca";
+        document.getElementById('i10').innerHTML="Italian Wedding Soup";
+        document.getElementById('i11').innerHTML="Chicken Saltimbocca";
+        document.getElementById('i12').innerHTML="Creamy Chicken Marsala";
+        document.getElementById('i13').innerHTML="Osso Buco";
+      }
+
+      function dessert()
+      {
+        document.getElementById("head").innerHTML="Dessert Menu";
+        document.getElementById('i1').innerHTML="Chocolate-Mint Bars";
+        document.getElementById('i2').innerHTML="Lemon-Scented Blueberry Cupcakes";
+        document.getElementById('i3').innerHTML="Bourbon-Pecan Tart with Chocolate Drizzle";
+        document.getElementById('i4').innerHTML="Raspberry-Rhubarb Pie";  
+        document.getElementById('i5').innerHTML="Classic Fudge-Walnut Brownies";
+        document.getElementById('i6').innerHTML="Nathan’s Lemon Cake";
+        document.getElementById('i7').innerHTML="Blueberry-Peach Cobbler";
+        document.getElementById('i8').innerHTML="Roasted Banana Bars with Browned Butter–Pecan Frosting";
+        document.getElementById('i9').innerHTML="Strawberry-Almond Cream Tart";
+        document.getElementById('i10').innerHTML="Hello Dolly Bars";
+        document.getElementById('i11').innerHTML="Texas Sheet Cake";
+        document.getElementById('i12').innerHTML="Espresso Crinkles";
+        document.getElementById('i13').innerHTML="Vanilla Cheesecake with Cherry Topping";
+      }
+      
+    </script>
+  </body>
+</html>

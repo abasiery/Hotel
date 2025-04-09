@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <!-- NORMAILZE CSS FILE -->
+    <link rel="stylesheet" href="CSS/normailze.css"/>
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="CSS/all.min.css"/>
+    <!-- bootstrap library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="CSS/details.css">
+    <link rel="stylesheet" href="CSS/anim.css"/>
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Monsieur+La+Doulaise&family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script defer src="JS/animation.js"></script> 
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #8c827923; color: #8c827923;">
+        <a class="navbar-brand" href="#">
+            <img src="imgs/NoBackgroundLogo.png" alt="" width="50" height="50"/>
+        </a>
+        <!-- <a class="navbar-brand" href="#"> JAM Luxury hotel </a> -->
+        <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ms-auto">
+                <li class="navbar nav-item">
+                    <a  class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="navbar nav-item">
+                    <a  class="nav-link" href="Dates.html">Rooms</a>
+                </li>
+                <li class="navbar nav-item">
+                    <a  class="nav-link" href="Restaurant.html">Restaurant</a>
+                </li>
+                <li class="navbar nav-item">
+                    <a  class="nav-link" href="Events.html">Event</a>
+                </li>
+                <li class="navbar nav-item">
+                    <a  class="nav-link" href="Contactus.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+        <!-- Step progress Bar -->
+        <div class="step">
+            <ul class="progressbar">
+                <li class="activey">Dates</li>
+                <li class="active">Category</li>
+                <li class="activex">Details</li>
+            </ul>
+            <ul>
+                <li><i class="fa-sharp fa-solid fa-check"></i></li>
+                <li><i class="fa-sharp fa-solid fa-check"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </div>
+
+
+
+        <!-- Start the landing -->
+    <div class="landing">
+        <div class="overlay">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="form">
+            <div class="content">
+                <p>Enter Data to Confirm Reservation</p>
+                <form action="">
+                    <!-- email -->
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInputE" placeholder="name@example.com" onchange="checkEmail()">
+                        <label for="floatingInputE">Email address</label>
+                    </div>
+                    <!-- name -->
+                    <div class="name">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Enter First name" onchange="checkName()">
+                            <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="lastName"  onchange="checkLName()" placeholder="Enter Last name">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="Password" onchange="checkPhoneNumber()">
+                        <label for="floatingPhone">Phone Number</label>
+                    </div>
+
+                    <!-- date -->
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="floatingPassword" placeholder="Enter Your bithdate" style="margin: 15px 0;" onchange="checkBD()">
+                        <label for="floatingPassword">Birthdate</label>
+                    </div>
+
+                    <!-- nationality -->
+                    <div class="form-floating">
+                        <!-- <label for="floatingNationality">Select Nationality</label> -->
+                        <select class="form-select" aria-label="Default select example" id="floatingNationality" style="padding-top: 2%;">
+                        <option value="" selected>Select Nationality</option>
+                        <option value="afghan">Afghan</option>
+                        <option value="albanian">Albanian</option>
+                        <option value="algerian">Algerian</option>
+                        <option value="american">American</option>
+                        <option value="andorran">Andorran</option>
+                        <option value="angolan">Angolan</option>
+                        <option value="antiguans">Antiguans</option>
+                        <option value="argentinean">Argentinean</option>
+                        <option value="armenian">Armenian</option>
+                        <option value="australian">Australian</option>
+                        <option value="austrian">Austrian</option>
+                        <option value="azerbaijani">Azerbaijani</option>
+                        <option value="bahamian">Bahamian</option>
+                        <option value="bahraini">Bahraini</option>
+                        <option value="bangladeshi">Bangladeshi</option>
+                        <option value="barbadian">Barbadian</option>
+                        <option value="barbudans">Barbudans</option>
+                        <option value="batswana">Batswana</option>
+                        <option value="belarusian">Belarusian</option>
+                        <option value="belgian">Belgian</option>
+                        <option value="belizean">Belizean</option>
+                        <option value="beninese">Beninese</option>
+                        <option value="bhutanese">Bhutanese</option>
+                        <option value="bolivian">Bolivian</option>
+                        <option value="bosnian">Bosnian</option>
+                        <option value="brazilian">Brazilian</option>
+                        <option value="british">British</option>
+                        <option value="bruneian">Bruneian</option>
+                        <option value="bulgarian">Bulgarian</option>
+                        <option value="burkinabe">Burkinabe</option>
+                        <option value="burmese">Burmese</option>
+                        <option value="burundian">Burundian</option>
+                        <option value="cambodian">Cambodian</option>
+                        <option value="cameroonian">Cameroonian</option>
+                        <option value="canadian">Canadian</option>
+                        <option value="cape verdean">Cape Verdean</option>
+                        <option value="central african">Central African</option>
+                        <option value="chadian">Chadian</option>
+                        <option value="chilean">Chilean</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="colombian">Colombian</option>
+                        <option value="comoran">Comoran</option>
+                        <option value="congolese">Congolese</option>
+                        <option value="costa rican">Costa Rican</option>
+                        <option value="croatian">Croatian</option>
+                        <option value="cuban">Cuban</option>
+                        <option value="cypriot">Cypriot</option>
+                        <option value="czech">Czech</option>
+                        <option value="danish">Danish</option>
+                        <option value="djibouti">Djibouti</option>
+                        <option value="dominican">Dominican</option>
+                        <option value="dutch">Dutch</option>
+                        <option value="east timorese">East Timorese</option>
+                        <option value="ecuadorean">Ecuadorean</option>
+                        <option value="egyptian">Egyptian</option>
+                        <option value="emirian">Emirian</option>
+                        <option value="equatorial guinean">Equatorial Guinean</option>
+                        <option value="eritrean">Eritrean</option>
+                        <option value="estonian">Estonian</option>
+                        <option value="ethiopian">Ethiopian</option>
+                        <option value="fijian">Fijian</option>
+                        <option value="filipino">Filipino</option>
+                        <option value="finnish">Finnish</option>
+                        <option value="french">French</option>
+                        <option value="gabonese">Gabonese</option>
+                        <option value="gambian">Gambian</option>
+                        <option value="georgian">Georgian</option>
+                        <option value="german">German</option>
+                        <option value="ghanaian">Ghanaian</option>
+                        <option value="greek">Greek</option>
+                        <option value="grenadian">Grenadian</option>
+                        <option value="guatemalan">Guatemalan</option>
+                        <option value="guinea-bissauan">Guinea-Bissauan</option>
+                        <option value="guinean">Guinean</option>
+                        <option value="guyanese">Guyanese</option>
+                        <option value="haitian">Haitian</option>
+                        <option value="herzegovinian">Herzegovinian</option>
+                        <option value="honduran">Honduran</option>
+                        <option value="hungarian">Hungarian</option>
+                        <option value="icelander">Icelander</option>
+                        <option value="indian">Indian</option>
+                        <option value="indonesian">Indonesian</option>
+                        <option value="iranian">Iranian</option>
+                        <option value="iraqi">Iraqi</option>
+                        <option value="irish">Irish</option>
+                        <option value="israeli">Israeli</option>
+                        <option value="italian">Italian</option>
+                        <option value="ivorian">Ivorian</option>
+                        <option value="jamaican">Jamaican</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="jordanian">Jordanian</option>
+                        <option value="kazakhstani">Kazakhstani</option>
+                        <option value="kenyan">Kenyan</option>
+                        <option value="kittian and nevisian">Kittian and Nevisian</option>
+                        <option value="kuwaiti">Kuwaiti</option>
+                        <option value="kyrgyz">Kyrgyz</option>
+                        <option value="laotian">Laotian</option>
+                        <option value="latvian">Latvian</option>
+                        <option value="lebanese">Lebanese</option>
+                        <option value="liberian">Liberian</option>
+                        <option value="libyan">Libyan</option>
+                        <option value="liechtensteiner">Liechtensteiner</option>
+                        <option value="lithuanian">Lithuanian</option>
+                        <option value="luxembourger">Luxembourger</option>
+                        <option value="macedonian">Macedonian</option>
+                        <option value="malagasy">Malagasy</option>
+                        <option value="malawian">Malawian</option>
+                        <option value="malaysian">Malaysian</option>
+                        <option value="maldivan">Maldivan</option>
+                        <option value="malian">Malian</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="marshallese">Marshallese</option>
+                        <option value="mauritanian">Mauritanian</option>
+                        <option value="mauritian">Mauritian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="micronesian">Micronesian</option>
+                        <option value="moldovan">Moldovan</option>
+                        <option value="monacan">Monacan</option>
+                        <option value="mongolian">Mongolian</option>
+                        <option value="moroccan">Moroccan</option>
+                        <option value="mosotho">Mosotho</option>
+                        <option value="motswana">Motswana</option>
+                        <option value="mozambican">Mozambican</option>
+                        <option value="namibian">Namibian</option>
+                        <option value="nauruan">Nauruan</option>
+                        <option value="nepalese">Nepalese</option>
+                        <option value="new zealander">New Zealander</option>
+                        <option value="ni-vanuatu">Ni-Vanuatu</option>
+                        <option value="nicaraguan">Nicaraguan</option>
+                        <option value="nigerien">Nigerien</option>
+                        <option value="north korean">North Korean</option>
+                        <option value="northern irish">Northern Irish</option>
+                        <option value="norwegian">Norwegian</option>
+                        <option value="omani">Omani</option>
+                        <option value="pakistani">Pakistani</option>
+                        <option value="palauan">Palauan</option>
+                        <option value="panamanian">Panamanian</option>
+                        <option value="papua new guinean">Papua New Guinean</option>
+                        <option value="paraguayan">Paraguayan</option>
+                        <option value="peruvian">Peruvian</option>
+                        <option value="polish">Polish</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="qatari">Qatari</option>
+                        <option value="romanian">Romanian</option>
+                        <option value="russian">Russian</option>
+                        <option value="rwandan">Rwandan</option>
+                        <option value="saint lucian">Saint Lucian</option>
+                        <option value="salvadoran">Salvadoran</option>
+                        <option value="samoan">Samoan</option>
+                        <option value="san marinese">San Marinese</option>
+                        <option value="sao tomean">Sao Tomean</option>
+                        <option value="saudi">Saudi</option>
+                        <option value="scottish">Scottish</option>
+                        <option value="senegalese">Senegalese</option>
+                        <option value="serbian">Serbian</option>
+                        <option value="seychellois">Seychellois</option>
+                        <option value="sierra leonean">Sierra Leonean</option>
+                        <option value="singaporean">Singaporean</option>
+                        <option value="slovakian">Slovakian</option>
+                        <option value="slovenian">Slovenian</option>
+                        <option value="solomon islander">Solomon Islander</option>
+                        <option value="somali">Somali</option>
+                        <option value="south african">South African</option>
+                        <option value="south korean">South Korean</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="sri lankan">Sri Lankan</option>
+                        <option value="sudanese">Sudanese</option>
+                        <option value="surinamer">Surinamer</option>
+                        <option value="swazi">Swazi</option>
+                        <option value="swedish">Swedish</option>
+                        <option value="swiss">Swiss</option>
+                        <option value="syrian">Syrian</option>
+                        <option value="taiwanese">Taiwanese</option>
+                        <option value="tajik">Tajik</option>
+                        <option value="tanzanian">Tanzanian</option>
+                        <option value="thai">Thai</option>
+                        <option value="togolese">Togolese</option>
+                        <option value="tongan">Tongan</option>
+                        <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                        <option value="tunisian">Tunisian</option>
+                        <option value="turkish">Turkish</option>
+                        <option value="tuvaluan">Tuvaluan</option>
+                        <option value="ugandan">Ugandan</option>
+                        <option value="ukrainian">Ukrainian</option>
+                        <option value="uruguayan">Uruguayan</option>
+                        <option value="uzbekistani">Uzbekistani</option>
+                        <option value="venezuelan">Venezuelan</option>
+                        <option value="vietnamese">Vietnamese</option>
+                        <option value="welsh">Welsh</option>
+                        <option value="yemenite">Yemenite</option>
+                        <option value="zambian">Zambian</option>
+                        <option value="zimbabwean">Zimbabwean</option>
+                    </select>
+                    </div>
+                    <br>
+
+                    <div class="payment">
+                        <select class="form-select" aria-label="Default select example" id="floatingMethod" style="padding: 2%; margin-bottom: 3%;" onchange="checkMethod()">
+                            <option value="" selected>Select Payment Method</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Visa">Visa</option>
+                        </select>
+                        <div id="VisaNo" class="form-floating mb-3" style="display: none;">
+                            <input type="text" class="form-control" id="floatingInputP" placeholder="Enter Payment Card Number" onchange="checkPayment()">
+                            <label for="floatingInputP">Visa Card Number</label>
+                        </div>
+                        <div id="account" style="
+                        margin-bottom: 4%;color: #664d03;font-weight: bold;text-align: center;border-radius: 10px;font-size: larger; display: none;"> Already have an account </div>
+                        <div id="test" class="form-floating mb-3" >
+                            <p id="showTot"> Click to Show Your Total  </p>
+                            <p id="tot"></p>
+                            
+                        </div>
+                    </div>
+                    <!-- submission button -->
+                    <div class="butn" style="display: flex; justify-content:flex-end; align-items:center; ">
+                        <button id="final" type="button" class="btn btn-outline-light" style="margin: 3px;">submit</button>
+                        <!-- <button id="receipt" type="button" class="btn btn-outline-light" style="margin: 3px;">Show receipt</button> -->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- End the landing -->
+
+<!-- Contact -->
+    <!-- <div class="contact basic">
+        <div class="container basic">
+            <div class="special-heading basic">Contact</div>
+            <p>Your home away from home </p>
+            <div class="info basic">
+                <p class="label basic">Feel free to drop us a line at:</p>
+                <a href="mailto:jamagency@mail.com?subject=Contact" class="link basic">Jam_agency@mail.com</a>
+                <div class="social">
+                    Find Us On Social Networks
+                        <a class="youtube basic" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a class="facebook basic" href="https://www.facebook.com/?stype=lo&jlou=Aff9r0KXmEDFE5ZOk04pKS-8wS5mk18oqCy_ny91e6ldNITnk1VqObsWxyxIey9H3N-6_hQfiwHpCUDZJw79C794Ak6p_wy7bTdKf69lXYNRyg&smuh=10442&lh=Ac8dw2bEfk8G-d6yAJc"><i class="fab fa-facebook-f"></i></a>
+                        <a class="twitter basic" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ------------------------------------ -->
+    <!-- Modal -->
+        <div id="id01" class="modal">
+    
+            <div class="modal-content animate" id="merna">
+                <div>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+    
+                <div class="contain">
+                    <p id="message"></p>
+                    <div class="contain" >
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    <!-- --------------------------------------------- -->
+    
+    <!-- JS -->
+    <script>
+        var person_id = 0;
+        var existed = 0 ;
+        var cashh = 0
+        const FinalBtn = document.getElementById('final');
+        FinalBtn.addEventListener('click' ,checkAllIsFine);
+
+        const showTotBtn = document.getElementById('showTot')
+        const baseUrl = 'http://localhost:8282/info'
+        showTotBtn.addEventListener('click' ,totalPrice);
+        async function totalPrice(e){
+            e.preventDefault();
+            const res = await fetch (baseUrl,{
+                method : 'GET'
+            })
+            console.log(res)
+            const data = await res.json()
+            tot.style.opacity = 0;
+            setTimeout(function(){ 
+            // Load new content
+            tot.innerHTML=data.info + " L.E."
+            // Fade in
+            tot.style.opacity = 1;
+            },500);
+            
+
+        }
+        function checkName(){
+        var modal = document.getElementById('id01') 
+        var fname=document.getElementById("floatingInput").value
+        var nREGEX = /^[a-zA-Z\s]{3,20}$/
+        var nResult = nREGEX.test(fname);
+        if(nResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Name"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("floatingInput").value=""
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    }
+        function checkLName(){
+        var modal = document.getElementById('id01') 
+        var Lname=document.getElementById("lastName").value
+        var nREGEX = /^[a-zA-Z\s]{3,20}$/
+        var nResult = nREGEX.test(Lname);
+        if(nResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Name"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("lastName").value=""
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        async function checkEmail(){
+            //e.preventDefault();
+        var modal = document.getElementById('id01')
+        var email=document.getElementById("floatingInputE").value
+        var nREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+[/.]{1}[a-zA-Z]+$/
+        var nResult = nREGEX.test(email);
+        if(nResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Email"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("floatingInputE").value=""
+        }
+
+        else{
+            const baseUrl = 'http://localhost:8282/account' ;
+                    await fetch(baseUrl,
+                    {   method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                            },
+                        body: JSON.stringify({ parcel_Email : email })
+                    }).then((response) => response.json())
+                    .then((data) => {
+            //if the email exists
+            x= data.info
+            if(x == "existingAccount"){
+                existed = 1 ;
+                // alert("This account already exisits! Your data will be automatically filled");
+                document.getElementById('message').innerHTML="This account already exisits! Your data will be automatically filled"
+                document.getElementById('merna').style.height='30%'
+                document.getElementById('id01').style.display='block'
+
+
+
+                document.getElementById("account").style.display="block";
+                const Fname = document.getElementById("floatingInput")
+                const Lname = document.getElementById("lastName")
+                const Email=document.getElementById("floatingInputE")
+                const Bdate = document.getElementById("floatingPassword")
+                const Nationality = document.getElementById("floatingNationality")
+                
+                Fname.value = data.info_fname
+                Lname.value = data.info_lname
+                person_id = data.info_pid
+                
+
+                date="";
+                for(var i=0 ; i<10 ;i++ ){
+                    date=date+data.info_bd[i]
+                }
+
+                Bdate.value = date
+                Nationality.value= data.info_nation
+                        console.log(data)
+                    
+
+                }
+            })
+
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        function checkPhoneNumber(){
+        var modal = document.getElementById('id01')
+        var Phone=document.getElementById("floatingPhone").value
+        var nREGEX = /^[0]{1}[0-9]{10}$/
+        var nResult = nREGEX.test(Phone);
+        if(nResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Phone Number <br> Using this Format <br>  01111111111"
+        document.getElementById('merna').style.height='35%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("floatingPhone").value=""
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }   
+        }
+        }
+        function checkBD(){
+        var modal = document.getElementById('id01')
+        var Bdate = document.getElementById("floatingPassword").value
+        var date = new Date();
+        var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+        if(Bdate>current_date){
+        document.getElementById('message').innerHTML="Enter a valid Birth Date"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("floatingPassword").value=""
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        function checkMethod(){
+            Method = document.getElementById("floatingMethod")
+            
+            if(Method.value == "Visa"){
+                cashh = 0
+                document.getElementById('VisaNo').style.display='block'
+            }
+            if(Method.value == "Cash"){
+                cashh = 1
+                document.getElementById('VisaNo').style.display='none'
+                document.getElementById('floatingInputP').value = ''
+            }
+        }
+        function checkPayment(){
+        var modal = document.getElementById('id01')
+        var Visa=document.getElementById("floatingInputP").value
+        var nREGEX = /^4[0-9]{12}(?:[0-9]{3})?$/
+        var nResult = nREGEX.test(Visa);
+        if(nResult == false)
+        {
+        document.getElementById('message').innerHTML="Please enter a valid Visa Card Number <br> Ex: 4111111111111111"
+        document.getElementById('merna').style.height='30%'
+        document.getElementById('id01').style.display='block'
+        document.getElementById("floatingInputP").value=""
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+
+        async function checkAllIsFine(e){
+            e.preventDefault();
+            const modal = document.getElementById('id01')
+            const Fname = document.getElementById("floatingInput")
+            const Lname = document.getElementById("lastName")
+            const Email=document.getElementById("floatingInputE")
+            const Phone=document.getElementById("floatingPhone")
+            const Bdate = document.getElementById("floatingPassword")
+            const Visa=document.getElementById("floatingInputP")
+            const Nationality = document.getElementById("floatingNationality")
+            const Method = document.getElementById("floatingMethod")
+
+            if ( Method.value.length==0 || Fname.value.length==0 || Lname.value.length==0 || Email.value.length==0 || Phone.value.length==0 || Bdate.value.length==0  || Nationality.value.length==0  ){
+                document.getElementById('message').innerHTML="Please Fill all your Informations"
+                document.getElementById('merna').style.height='30%'
+                document.getElementById('id01').style.display='block'
+            }
+            if(cashh == 0 && Visa.value.length == 0){
+                document.getElementById('message').innerHTML="Please Fill all your Informations"
+                document.getElementById('merna').style.height='30%'
+                document.getElementById('id01').style.display='block'
+            }
+            else{
+
+                if(existed==0){
+
+                    //creating a new account
+                    const baseUrl = 'http://localhost:8282/details' ;
+                    await fetch(baseUrl,
+                    {   method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                            },
+                        body: JSON.stringify({     
+                            parcel_Fname : Fname.value,
+                            parcel_Lname : Lname.value,
+                            parcel_Email : Email.value,
+                            parcel_Phone : Phone.value,
+                            parcel_Bdate : Bdate.value,
+                            parcel_Visa  : Visa.value,
+                            parcel_method  : Method.value,
+                            parcel_Nationality : Nationality.value })
+                    }).then((response) => response.json())
+                    .then((data) => {
+                        console.log(data)
+                    })
+                
+                    
+                }
+            else{
+                const baseUrl = 'http://localhost:8282/updating' ;
+                    await fetch(baseUrl,
+                    {   method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                            },
+                        body: JSON.stringify({ 
+                            parcel_pid :  person_id,
+                            parcel_Phone : Phone.value,
+                            parcel_Visa  : Visa.value,
+                            parcel_method  : Method.value
+                        })
+                    }).then((response) => response.json())
+                    .then((data) => {
+                        console.log(data)
+                    })
+            }
+                
+        }
+        const baseUrl2 = 'http://localhost:8282/receipt'
+                    const res = await fetch (baseUrl2,{
+                    method : 'GET'
+                    })
+                    console.log(res)
+                    const data = await res.json()
+                    tot_price= data.p_info
+                    room_info=data.room_info
+                    start = data.start_info
+                    end = data.end_info
+                    document.getElementById('message').innerHTML="𝓨𝓸𝓾𝓻 𝓡𝓮𝓬𝓮𝓲𝓹𝓽<br><br>First Name: "+Fname.value+"<br>Last Name: "+Lname.value+"<br>Email: "+Email.value+"<br>Phone: "
+                    +Phone.value+"<br>Start Date: "+start+"<br>End Date: "+end+"<br>Room Details: "+room_info+"<br>Total price: "+tot_price+"L.E.<br>"
+                    
+                    document.getElementById('merna').style.height='60%'
+                    document.getElementById('id01').style.display='block'
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
